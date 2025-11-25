@@ -47,7 +47,7 @@ composer require ctw/ctw-skeleton
 ## Usage Examples
 
 ```php
-use Ctw\Skeleton\Example;
+use Ctw\Skeleton\Skeleton;
 
 // Example code here
 ```
