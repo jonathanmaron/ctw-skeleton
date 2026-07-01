@@ -3,21 +3,50 @@ declare(strict_types=1);
 
 namespace CtwTest\Skeleton;
 
-use PHPUnit\Framework\Attributes\CoversNothing;
+use Ctw\Skeleton\Skeleton;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 /**
- * Placeholder test so the PHPUnit suite has at least one test to execute.
+ * Unit tests for the ctw-skeleton placeholder class.
  *
- * ctw-skeleton is an empty template package with no source classes yet, which
- * makes PHPUnit 13 report "No tests executed!". This keeps `composer test`
- * green; replace it with real tests once the skeleton gains source classes.
+ * ctw-skeleton is a template package whose only source file is an intentionally
+ * empty placeholder class. These tests confirm the placeholder exists, can be
+ * instantiated, and exposes no public API, so the coverage source filter has a
+ * file to match and `composer test` stays green.
  */
-#[CoversNothing]
+#[CoversClass(Skeleton::class)]
 final class SkeletonTest extends TestCase
 {
-    public function testSuiteExecutes(): void
+    /**
+     * Test that a Skeleton instance is produced when the class is constructed with no arguments.
+     */
+    public function testConstructorReturnsSkeletonInstanceWhenInstantiatedWithoutArguments(): void
     {
-        $this->expectNotToPerformAssertions();
+        $skeleton = new Skeleton();
+
+        // @phpstan-ignore-next-line
+        self::assertInstanceOf(Skeleton::class, $skeleton);
+    }
+
+    /**
+     * Test that the placeholder is declared final when its class definition is reflected.
+     */
+    public function testSkeletonClassIsDeclaredFinalWhenReflected(): void
+    {
+        $reflection = new ReflectionClass(Skeleton::class);
+
+        self::assertTrue($reflection->isFinal());
+    }
+
+    /**
+     * Test that the placeholder exposes no public methods when its class definition is reflected.
+     */
+    public function testSkeletonClassDeclaresNoMethodsWhenReflected(): void
+    {
+        $reflection = new ReflectionClass(Skeleton::class);
+
+        self::assertCount(0, $reflection->getMethods());
     }
 }
