@@ -1,10 +1,7 @@
 # Package "ctw/ctw-skeleton"
 
 [![Latest Stable Version](https://poser.pugx.org/ctw/ctw-skeleton/v/stable)](https://packagist.org/packages/ctw/ctw-skeleton)
-[![GitHub Actions](https://github.com/jonathanmaron/ctw-skeleton/actions/workflows/tests.yml/badge.svg)](https://github.com/jonathanmaron/ctw-skeleton/actions/workflows/tests.yml)
-[![Scrutinizer Build](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/build-status/master)
-[![Scrutinizer Quality](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jonathanmaron/ctw-skeleton/?branch=master)
+[![GitHub Actions](https://github.com/jonathanmaron/ctw-skeleton/actions/workflows/ci.yml/badge.svg)](https://github.com/jonathanmaron/ctw-skeleton/actions/workflows/ci.yml)
 
 Package description.
 
