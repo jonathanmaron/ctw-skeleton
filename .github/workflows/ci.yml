@@ -68,14 +68,6 @@ jobs:
             # green, move it into php_versions, where it blocks, and drop this.
             php_versions_canary: '["8.6"]'
 
-            # src/Skeleton.php is a placeholder class with no imports, so
-            # the require checker finds no symbols at all and exits 1 with
-            # "There were no symbols found, please check your configuration."
-            # That is a report about an empty template, not about a missing
-            # dependency, so the job is switched off rather than left failing.
-            # Turn it back on once this skeleton grows real source.
-            composer_requirements: false
-
             # Every job is on by default. Uncomment to switch one off.
             #
             # phpunit: false
@@ -86,7 +78,6 @@ jobs:
             # composer_validate: false
             # composer_normalize: false
             # composer_audit: false
-            # composer_unused: false
+            # composer_dependencies: false
             # composer_outdated: false
             # backward_compatibility: false
-            # infection: true
